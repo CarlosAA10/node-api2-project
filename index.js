@@ -13,7 +13,9 @@ server.get('/', (req, res) => {
 
 server.use("/api/posts", dBaseRouter); 
 
+const port = process.env.PORT || 8000;
+
 server.listen(8000, () => {
-    console.log('\n*** Server is running on http://localhost:8000 ***\n'); 
+    console.log(`\n*** Server Running on http://localhost:${port} ***\n`); 
 }); 
 
